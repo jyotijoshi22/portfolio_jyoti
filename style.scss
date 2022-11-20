@@ -1,0 +1,202 @@
+@use "./partials/responsive";
+//@use "./modules/extends.scss";
+@use "./modules/mixins.scss";
+
+//Styling for Navigation bar
+.navbar {
+  color: black;
+  background-color: beige;
+  font-weight: bold;
+  transition: 2s;
+  width: 100%;
+  height: 2cm;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+
+  //Header styling
+
+  &__container {
+    @include mixins.flex-content(row, center, flex-end, nowrap);
+    &--item {
+      margin: 30px;
+      list-style: none;
+      padding: 10px;
+    }
+
+    @include responsive.small {
+      display: none;
+      //background-color: none;
+    }
+  }
+}
+
+//main class of the portfolio code.
+.content {
+  @include mixins.flex-content(column, center, center, nowrap);
+  width: 100%;
+
+  background-image: linear-gradient(pink, skyblue);
+}
+
+/// divides the page
+.page-block {
+  // Responsive for each section of the code
+  padding: 50px 0px;
+
+  // Each section fills viewport by default
+  min-height: 100vh;
+  width: 100%;
+}
+
+//main page banner styling
+
+.home {
+  @include mixins.flex-content(column, center, center, nowrap);
+  // position: relative;
+  // top: 300px;
+  width: 100%;
+  font-size: 2rem;
+  z-index: 0;
+
+  @include responsive.small {
+    @include mixins.flex-content(column, center, center, nowrap);
+  }
+
+  @include responsive.medium {
+    @include mixins.flex-content(column, center, center, nowrap);
+  }
+}
+
+//Skill section
+
+.skills {
+  z-index: 1;
+  @include responsive.small {
+    @include mixins.flex-content(column, center, center, nowrap);
+  }
+
+  @include responsive.medium {
+    @include mixins.flex-content(column, center, center, nowrap);
+  }
+
+  &__head {
+    @include mixins.flex-content(column, center, center, flex-start);
+    font-size: 1rem;
+    margin: 30px;
+
+    &--head1 {
+      text-align: center;
+    }
+
+    &--head2 {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  }
+
+  &__list {
+    @include mixins.flex-content(row, center, center, flex-start);
+    &--item {
+      font-size: 1.5rem;
+      margin: 10px;
+
+      &-text {
+        margin-left: 10px;
+      }
+    }
+
+    @include responsive.small {
+      @include mixins.flex-content(column, center, center, nowrap);
+    }
+  }
+}
+
+.projects {
+  @include mixins.flex-content(column, center, center, nowrap);
+
+  &__head {
+    font-size: larger;
+    margin: 20px;
+  }
+
+  &__done {
+    @include mixins.flex-content(column, center, center, wrap);
+
+    &__item {
+      margin: 20px;
+      padding: 30px;
+      &--pic {
+        border: solid;
+        border-color: blue;
+        //border-radius: 2cm;
+        border-width: 10px;
+        margin: 10px;
+      }
+      @include mixins.flex-content(row, center, center, nowrap);
+      max-width: 500px;
+
+      @include responsive.small {
+        @include mixins.flex-content(column, center, center, nowrap);
+      }
+
+      @include responsive.medium {
+        @include mixins.flex-content(column, center, center, nowrap);
+      }
+    }
+  }
+}
+
+.edu {
+  @include mixins.flex-content(column, center, center, wrap);
+  font-size: 1.5rem;
+  &__head {
+    text-decoration: underline;
+  }
+
+  &__degree {
+    font-size: 1rem;
+    &--item {
+      font-weight: bold;
+    }
+  }
+
+  @include responsive.small {
+    @include mixins.flex-content(column, center, center, nowrap);
+  }
+  @include responsive.medium {
+    @include mixins.flex-content(column, center, center, nowrap);
+  }
+}
+
+.contact {
+  font-size: 1rem;
+  margin: 20px;
+  border-style: double;
+  border-width: thick;
+
+  &__head {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__icons {
+    @include mixins.flex-content(row, space-between, center, wrap);
+    &--text {
+      font-weight: bold;
+      margin: 10px;
+      flex-direction: row;
+      @include responsive.small {
+        @include mixins.flex-content(column, flex-start, flex-start, nowrap);
+      }
+      @include responsive.medium {
+        @include mixins.flex-content(column, center, center, nowrap);
+      }
+    }
+    &--pic {
+      @include responsive.small {
+        display: none;
+      }
+    }
+  }
+}
