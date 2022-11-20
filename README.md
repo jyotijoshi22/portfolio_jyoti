@@ -10,7 +10,7 @@ Acknowledgements
 
 ## Description
 
-The portfolio contains information about the me, projects created, skills and contact information.
+The portfolio contains information about me, projects created, skills and contact information.
 
 ## Built With
 
