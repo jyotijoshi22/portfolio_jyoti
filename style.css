@@ -53,6 +53,15 @@
   font-size: 2rem;
   z-index: 0;
 }
+.home__intro {
+  font-family: "Josefin Slab", serif;
+}
+.home__resume {
+  font-size: 24px;
+  background-color: pink;
+  cursor: pointer;
+  font-family: "El Messiri", sans-serif;
+}
 @media only screen and (max-width: 576px) {
   .home {
     display: flex;
@@ -99,14 +108,14 @@
   justify-content: center;
   align-items: center;
   flex-wrap: flex-start;
-  font-size: 1rem;
-  margin: 30px;
+  font-size: 2rem;
+  margin: 10px;
 }
 .skills__head--head1 {
   text-align: center;
 }
 .skills__head--head2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: left;
 }
 .skills__list {
@@ -140,9 +149,9 @@
   align-items: center;
   flex-wrap: nowrap;
 }
-.projects__head {
-  font-size: larger;
-  margin: 20px;
+.projects__head--center {
+  font-size: 2rem;
+  margin: 10px;
 }
 .projects__done {
   display: flex;
@@ -152,7 +161,7 @@
   flex-wrap: wrap;
 }
 .projects__done__item {
-  margin: 20px;
+  margin: 50px;
   padding: 30px;
   display: flex;
   flex-direction: row;
@@ -166,6 +175,13 @@
   border-color: blue;
   border-width: 10px;
   margin: 10px;
+}
+.projects__done__item--descrp {
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+  text-align: left;
+  margin: 2px;
 }
 @media only screen and (max-width: 576px) {
   .projects__done__item {
@@ -224,7 +240,7 @@
 
 .contact {
   font-size: 1rem;
-  margin: 20px;
+  margin: 0cm;
   border-style: double;
   border-width: thick;
 }

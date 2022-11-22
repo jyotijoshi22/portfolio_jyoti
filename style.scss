@@ -59,6 +59,17 @@
   font-size: 2rem;
   z-index: 0;
 
+  &__intro {
+    font-family: "Josefin Slab", serif;
+  }
+
+  &__resume {
+    font-size: 24px;
+    background-color: pink;
+    cursor: pointer;
+    font-family: "El Messiri", sans-serif;
+  }
+
   @include responsive.small {
     @include mixins.flex-content(column, center, center, nowrap);
   }
@@ -82,15 +93,15 @@
 
   &__head {
     @include mixins.flex-content(column, center, center, flex-start);
-    font-size: 1rem;
-    margin: 30px;
+    font-size: 2rem;
+    margin: 10px;
 
     &--head1 {
       text-align: center;
     }
 
     &--head2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       text-align: left;
     }
   }
@@ -116,15 +127,17 @@
   @include mixins.flex-content(column, center, center, nowrap);
 
   &__head {
-    font-size: larger;
-    margin: 20px;
+    &--center {
+      font-size: 2rem;
+      margin: 10px;
+    }
   }
 
   &__done {
     @include mixins.flex-content(column, center, center, wrap);
 
     &__item {
-      margin: 20px;
+      margin: 50px;
       padding: 30px;
       &--pic {
         border: solid;
@@ -132,6 +145,13 @@
         //border-radius: 2cm;
         border-width: 10px;
         margin: 10px;
+      }
+      &--descrp {
+        border: solid;
+        border-color: black;
+        border-width: 2px;
+        text-align: left;
+        margin: 2px;
       }
       @include mixins.flex-content(row, center, center, nowrap);
       max-width: 500px;
@@ -171,7 +191,8 @@
 
 .contact {
   font-size: 1rem;
-  margin: 20px;
+
+  margin: 0cm;
   border-style: double;
   border-width: thick;
 
