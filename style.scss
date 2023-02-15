@@ -26,7 +26,6 @@
 
     @include responsive.small {
       display: none;
-      //background-color: none;
     }
   }
 }
@@ -128,8 +127,7 @@
 
   &__head {
     &--center {
-      font-size: 2rem;
-      margin: 10px;
+      font-size: 3rem;
     }
   }
 
@@ -138,23 +136,23 @@
 
     &__item {
       margin: 50px;
-      padding: 30px;
+
       &--pic {
         border: solid;
-        border-color: blue;
-        //border-radius: 2cm;
-        border-width: 10px;
-        margin: 10px;
+        border-color: grey;
+        border-width: 2px;
+        margin: 30px;
       }
       &--descrp {
         border: solid;
         border-color: black;
-        border-width: 2px;
+        border-width: 1px;
         text-align: left;
         margin: 2px;
+        padding: 0 20px;
       }
       @include mixins.flex-content(row, center, center, nowrap);
-      max-width: 500px;
+      //max-width: 500px;
 
       @include responsive.small {
         @include mixins.flex-content(column, center, center, nowrap);

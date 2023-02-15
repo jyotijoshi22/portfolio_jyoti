@@ -150,8 +150,7 @@
   flex-wrap: nowrap;
 }
 .projects__head--center {
-  font-size: 2rem;
-  margin: 10px;
+  font-size: 3rem;
 }
 .projects__done {
   display: flex;
@@ -162,26 +161,25 @@
 }
 .projects__done__item {
   margin: 50px;
-  padding: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  max-width: 500px;
 }
 .projects__done__item--pic {
   border: solid;
-  border-color: blue;
-  border-width: 10px;
-  margin: 10px;
+  border-color: grey;
+  border-width: 2px;
+  margin: 30px;
 }
 .projects__done__item--descrp {
   border: solid;
   border-color: black;
-  border-width: 2px;
+  border-width: 1px;
   text-align: left;
   margin: 2px;
+  padding: 0 20px;
 }
 @media only screen and (max-width: 576px) {
   .projects__done__item {
